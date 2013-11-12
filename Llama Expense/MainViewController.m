@@ -7,9 +7,10 @@
 //
 
 #import "MainViewController.h"
+#import "GastoCell.h"
 
-@interface MainViewController ()
-
+@interface MainViewController () <UITableViewDataSource,UITableViewDelegate>
+@property (strong, nonatomic) NSMutableArray *dataSourceExpenses;
 @end
 
 @implementation MainViewController
@@ -38,6 +39,21 @@
     if ([[segue identifier] isEqualToString:@"showAlternate"]) {
         [[segue destinationViewController] setDelegate:self];
     }
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+	return [self.dataSourceExpenses count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	GastoCell *cell = (GastoCell *)[tableView dequeueReusableCellWithIdentifier:@"gastoCell"];
+	cell.montoLabel.text = @"$ 12.00";
+	cell.colorCategoria.backgroundColor = [UIColor colorWithRed:12/255.0f green:12/255.0f blue:12/255.0f alpha:1.0];
+	
+	return cell;
 }
 
 @end

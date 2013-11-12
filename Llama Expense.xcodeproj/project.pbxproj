@@ -28,6 +28,7 @@
 		046E5CA11831A7CE0018CAC6 /* CoreDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046E5CA01831A7CE0018CAC6 /* CoreDataController.m */; };
 		046E5CA81831A86D0018CAC6 /* Categoria.m in Sources */ = {isa = PBXBuildFile; fileRef = 046E5CA71831A86D0018CAC6 /* Categoria.m */; };
 		046E5CAB1831A86D0018CAC6 /* Gasto.m in Sources */ = {isa = PBXBuildFile; fileRef = 046E5CAA1831A86D0018CAC6 /* Gasto.m */; };
+		046E5CAF1831AA2F0018CAC6 /* GastoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 046E5CAE1831AA2F0018CAC6 /* GastoCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		046E5CA71831A86D0018CAC6 /* Categoria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categoria.m; sourceTree = "<group>"; };
 		046E5CA91831A86D0018CAC6 /* Gasto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gasto.h; sourceTree = "<group>"; };
 		046E5CAA1831A86D0018CAC6 /* Gasto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gasto.m; sourceTree = "<group>"; };
+		046E5CAD1831AA2F0018CAC6 /* GastoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GastoCell.h; sourceTree = "<group>"; };
+		046E5CAE1831AA2F0018CAC6 /* GastoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GastoCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,7 @@
 		046E5C691831A6A50018CAC6 /* Llama Expense */ = {
 			isa = PBXGroup;
 			children = (
+				046E5CAC1831AA0F0018CAC6 /* Subclasses */,
 				046E5CA51831A7E90018CAC6 /* Controlador */,
 				046E5CA31831A7D60018CAC6 /* Vista */,
 				046E5CA21831A7D20018CAC6 /* Modelo */,
@@ -203,6 +207,15 @@
 				046E5C7F1831A6A50018CAC6 /* FlipsideViewController.m */,
 			);
 			name = Controlador;
+			sourceTree = "<group>";
+		};
+		046E5CAC1831AA0F0018CAC6 /* Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				046E5CAD1831AA2F0018CAC6 /* GastoCell.h */,
+				046E5CAE1831AA2F0018CAC6 /* GastoCell.m */,
+			);
+			name = Subclasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +318,7 @@
 				046E5CAB1831A86D0018CAC6 /* Gasto.m in Sources */,
 				046E5C741831A6A50018CAC6 /* AppDelegate.m in Sources */,
 				046E5C7A1831A6A50018CAC6 /* Llama_Expense.xcdatamodeld in Sources */,
+				046E5CAF1831AA2F0018CAC6 /* GastoCell.m in Sources */,
 				046E5CA11831A7CE0018CAC6 /* CoreDataController.m in Sources */,
 				046E5C701831A6A50018CAC6 /* main.m in Sources */,
 				046E5C801831A6A50018CAC6 /* FlipsideViewController.m in Sources */,
