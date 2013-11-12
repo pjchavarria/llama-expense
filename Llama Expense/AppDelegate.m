@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
 #import "MainViewController.h"
+#import "Categoria.h"
 
 @implementation AppDelegate
 
@@ -16,8 +16,49 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
+- (void)crearCategoriasSiNoExisten
+{
+	NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Categoria"];
+	NSError *error = nil;
+	NSArray *categorias = [self.managedObjectContext executeFetchRequest:request error:&error];
+	if (error) {
+		NSLog(@"%@",error);
+	}
+	if (!categorias.count) {
+		// Creamos las categorias
+		Categoria *categoria = [NSEntityDescription insertNewObjectForEntityForName:@"Categoria" inManagedObjectContext:self.managedObjectContext];
+		categoria.nombre = @"Hogar";
+		categoria.color_red = @210;
+		categoria.color_green = @66;
+		categoria.color_blue = @80;
+		
+		Categoria *categoria2 = [NSEntityDescription insertNewObjectForEntityForName:@"Categoria" inManagedObjectContext:self.managedObjectContext];
+		categoria2.nombre = @"Servicios";
+		categoria2.color_red = @210;
+		categoria2.color_green = @206;
+		categoria2.color_blue = @94;
+		
+		Categoria *categoria3 = [NSEntityDescription insertNewObjectForEntityForName:@"Categoria" inManagedObjectContext:self.managedObjectContext];
+		categoria3.nombre = @"Auto";
+		categoria3.color_red = @40;
+		categoria3.color_green = @125;
+		categoria3.color_blue = @210;
+		
+		Categoria *categoria4 = [NSEntityDescription insertNewObjectForEntityForName:@"Categoria" inManagedObjectContext:self.managedObjectContext];
+		categoria4.nombre = @"Compras";
+		categoria4.color_red = @143;
+		categoria4.color_green = @210;
+		categoria4.color_blue = @100;
+		
+		[self saveContext];
+	}
+	
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	
+	[self crearCategoriasSiNoExisten];
     // Override point for customization after application launch.
 	MainViewController *controller = (MainViewController *)self.window.rootViewController;
 	controller.managedObjectContext = self.managedObjectContext;
@@ -34,6 +75,7 @@
 {
 	// Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
 	// If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+	[self saveContext];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application

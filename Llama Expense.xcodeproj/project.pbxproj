@@ -25,10 +25,9 @@
 		046E5C8C1831A6A50018CAC6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 046E5C671831A6A50018CAC6 /* CoreData.framework */; };
 		046E5C941831A6A50018CAC6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 046E5C921831A6A50018CAC6 /* InfoPlist.strings */; };
 		046E5C961831A6A50018CAC6 /* Llama_ExpenseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 046E5C951831A6A50018CAC6 /* Llama_ExpenseTests.m */; };
-		046E5CA11831A7CE0018CAC6 /* CoreDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046E5CA01831A7CE0018CAC6 /* CoreDataController.m */; };
-		046E5CA81831A86D0018CAC6 /* Categoria.m in Sources */ = {isa = PBXBuildFile; fileRef = 046E5CA71831A86D0018CAC6 /* Categoria.m */; };
 		046E5CAB1831A86D0018CAC6 /* Gasto.m in Sources */ = {isa = PBXBuildFile; fileRef = 046E5CAA1831A86D0018CAC6 /* Gasto.m */; };
 		046E5CAF1831AA2F0018CAC6 /* GastoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 046E5CAE1831AA2F0018CAC6 /* GastoCell.m */; };
+		046E5CB51831BA920018CAC6 /* Categoria.m in Sources */ = {isa = PBXBuildFile; fileRef = 046E5CB41831BA920018CAC6 /* Categoria.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,14 +64,12 @@
 		046E5C911831A6A50018CAC6 /* Llama ExpenseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Llama ExpenseTests-Info.plist"; sourceTree = "<group>"; };
 		046E5C931831A6A50018CAC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		046E5C951831A6A50018CAC6 /* Llama_ExpenseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Llama_ExpenseTests.m; sourceTree = "<group>"; };
-		046E5C9F1831A7CE0018CAC6 /* CoreDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataController.h; sourceTree = "<group>"; };
-		046E5CA01831A7CE0018CAC6 /* CoreDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataController.m; sourceTree = "<group>"; };
-		046E5CA61831A86D0018CAC6 /* Categoria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categoria.h; sourceTree = "<group>"; };
-		046E5CA71831A86D0018CAC6 /* Categoria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categoria.m; sourceTree = "<group>"; };
 		046E5CA91831A86D0018CAC6 /* Gasto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gasto.h; sourceTree = "<group>"; };
 		046E5CAA1831A86D0018CAC6 /* Gasto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gasto.m; sourceTree = "<group>"; };
 		046E5CAD1831AA2F0018CAC6 /* GastoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GastoCell.h; sourceTree = "<group>"; };
 		046E5CAE1831AA2F0018CAC6 /* GastoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GastoCell.m; sourceTree = "<group>"; };
+		046E5CB31831BA920018CAC6 /* Categoria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categoria.h; sourceTree = "<group>"; };
+		046E5CB41831BA920018CAC6 /* Categoria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categoria.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,13 +176,11 @@
 		046E5CA21831A7D20018CAC6 /* Modelo */ = {
 			isa = PBXGroup;
 			children = (
-				046E5C9F1831A7CE0018CAC6 /* CoreDataController.h */,
-				046E5CA01831A7CE0018CAC6 /* CoreDataController.m */,
 				046E5C781831A6A50018CAC6 /* Llama_Expense.xcdatamodeld */,
 				046E5CA91831A86D0018CAC6 /* Gasto.h */,
 				046E5CAA1831A86D0018CAC6 /* Gasto.m */,
-				046E5CA61831A86D0018CAC6 /* Categoria.h */,
-				046E5CA71831A86D0018CAC6 /* Categoria.m */,
+				046E5CB31831BA920018CAC6 /* Categoria.h */,
+				046E5CB41831BA920018CAC6 /* Categoria.m */,
 			);
 			name = Modelo;
 			sourceTree = "<group>";
@@ -319,10 +314,9 @@
 				046E5C741831A6A50018CAC6 /* AppDelegate.m in Sources */,
 				046E5C7A1831A6A50018CAC6 /* Llama_Expense.xcdatamodeld in Sources */,
 				046E5CAF1831AA2F0018CAC6 /* GastoCell.m in Sources */,
-				046E5CA11831A7CE0018CAC6 /* CoreDataController.m in Sources */,
 				046E5C701831A6A50018CAC6 /* main.m in Sources */,
+				046E5CB51831BA920018CAC6 /* Categoria.m in Sources */,
 				046E5C801831A6A50018CAC6 /* FlipsideViewController.m in Sources */,
-				046E5CA81831A86D0018CAC6 /* Categoria.m in Sources */,
 				046E5C7D1831A6A50018CAC6 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

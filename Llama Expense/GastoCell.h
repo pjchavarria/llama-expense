@@ -11,5 +11,6 @@
 @interface GastoCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UIView *colorCategoria;
 @property (strong, nonatomic) IBOutlet UILabel *montoLabel;
+@property (strong, nonatomic) IBOutlet UILabel *nombreCategoria;
 
 @end

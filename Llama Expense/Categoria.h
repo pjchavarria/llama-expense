@@ -9,17 +9,21 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class Gasto;
 
 @interface Categoria : NSManagedObject
 
-@property (nonatomic, retain) UNKNOWN_TYPE nombre;
+@property (nonatomic, retain) NSString * nombre;
+@property (nonatomic, retain) NSNumber * color_red;
+@property (nonatomic, retain) NSNumber * color_green;
+@property (nonatomic, retain) NSNumber * color_blue;
 @property (nonatomic, retain) NSSet *gastos;
 @end
 
 @interface Categoria (CoreDataGeneratedAccessors)
 
-- (void)addGastosObject:(NSManagedObject *)value;
-- (void)removeGastosObject:(NSManagedObject *)value;
+- (void)addGastosObject:(Gasto *)value;
+- (void)removeGastosObject:(Gasto *)value;
 - (void)addGastos:(NSSet *)values;
 - (void)removeGastos:(NSSet *)values;
 

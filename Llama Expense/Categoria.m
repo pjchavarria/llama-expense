@@ -7,11 +7,15 @@
 //
 
 #import "Categoria.h"
+#import "Gasto.h"
 
 
 @implementation Categoria
 
 @dynamic nombre;
+@dynamic color_red;
+@dynamic color_green;
+@dynamic color_blue;
 @dynamic gastos;
 
 @end

@@ -14,10 +14,15 @@
 - (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller;
 @end
 
-@interface FlipsideViewController : UIViewController
+@interface FlipsideViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) id <FlipsideViewControllerDelegate> delegate;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
+@property (strong, nonatomic) IBOutlet UITextField *displayTextField;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+@property (strong, nonatomic) NSArray *dataSourceCategorias;
 - (IBAction)done:(id)sender;
+- (IBAction)cancelar:(id)sender;
 
 @end
